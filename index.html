@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Secure Payment Gateway</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1><i class="fas fa-lock"></i> Secure Payment Gateway</h1>
+            <p>Complete your purchase with confidence</p>
+        </div>
+        
+        <form action="#" class="form-container">
+            <h2 class="section-title">Contact Information</h2>
+            
+            <div class="form-group">
+                <label for="name">Full Name <span class="required">*</span></label>
+                <input type="text" id="name" class="form-control" placeholder="Enter your full name" required>
+                <i class="fas fa-user"></i>
+            </div>
+            
+            <div class="form-group">
+                <label>Gender <span class="required">*</span></label>
+                <div class="radio-group">
+                    <label class="radio-option">
+                        <input type="radio" name="gender" value="male" required> Male
+                    </label>
+                    <label class="radio-option">
+                        <input type="radio" name="gender" value="female"> Female
+                    </label>
+                    <label class="radio-option">
+                        <input type="radio" name="gender" value="other"> Other
+                    </label>
+                </div>
+            </div>
+            
+            <div class="form-group">
+                <label for="address">Address</label>
+                <textarea id="address" class="form-control" placeholder="Enter your full address"></textarea>
+            </div>
+            
+            <div class="form-group">
+                <label for="email">Email <span class="required">*</span></label>
+                <input type="email" id="email" class="form-control" placeholder="example@domain.com" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="pincode">Pincode <span class="required">*</span></label>
+                <input type="number" id="pincode" class="form-control" placeholder="Enter 6-digit pincode" required>
+            </div>
+            
+            <h2 class="section-title">Payment Information</h2>
+            
+            <div class="form-group">
+                <label for="card-type">Card Type <span class="required">*</span></label>
+                <select id="card-type" class="form-control" required>
+                    <option value="">-- Select a Card Type --</option>
+                    <option value="visa">Visa</option>
+                    <option value="rupay">RuPay</option>
+                    <option value="mastercard">MasterCard</option>
+                    <option value="amex">American Express</option>
+                </select>
+                
+                <div class="card-icons">
+                    <div class="card-icon" data-card="visa"><i class="fab fa-cc-visa"></i></div>
+                    <div class="card-icon" data-card="mastercard"><i class="fab fa-cc-mastercard"></i></div>
+                    <div class="card-icon" data-card="amex"><i class="fab fa-cc-amex"></i></div>
+                    <div class="card-icon" data-card="rupay">RP</div>
+                </div>
+            </div>
+            
+            <div class="form-group">
+                <label for="card-number">Card Number <span class="required">*</span></label>
+                <input type="text" id="card-number" class="form-control" placeholder="1234 5678 9012 3456" required>
+            </div>
+            
+            <div class="card-details">
+                <div class="form-group">
+                    <label for="exp-date">Expiry Date <span class="required">*</span></label>
+                    <input type="month" id="exp-date" class="form-control" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="cvv">CVV <span class="required">*</span></label>
+                    <div class="expiry-cvv">
+                        <input type="password" id="cvv" class="form-control" placeholder="123" maxlength="3" required>
+                        <i class="fas fa-question-circle" title="3-digit code on back of your card"></i>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="form-group">
+                <button type="submit" class="btn">
+                    <i class="fas fa-lock"></i> Pay Securely
+                </button>
+            </div>
+        </form>
+        
+        <div class="footer">
+            <p>Your payment is secured with 256-bit SSL encryption. <a href="#">Learn more</a></p>
+            <p><i class="fas fa-shield-alt"></i> We don't store your credit card information</p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
